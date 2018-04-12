@@ -5,6 +5,6 @@ module.exports = function(source) {
     this.cacheable();
   }
   var options = this.exec(source, this.resource);
-  this.addContextDependency(options.path);
+  this.addContextDependency(path.resolve(this.context, options.path));
   return generateCode(options, this.context);
 };
