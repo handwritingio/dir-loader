@@ -1,4 +1,5 @@
 var generateCode = require("./lib/generateCode");
+var path = require("path");
 
 module.exports = function(source) {
   if (this.cacheable) {
